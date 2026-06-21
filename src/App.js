@@ -25,7 +25,7 @@ function App() {
   
       //Unsubscribe when component unmounts 
       return ()=> unsubscribe;
-    },[])
+    },[dispatch, navigate])
   return (
     <>
       <Navbar />
