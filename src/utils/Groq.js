@@ -1,6 +1,7 @@
 import { Groq } from "groq-sdk";
+import {GROQ_KEY} from './Constants';
 
 export const groq = new Groq({
-  apiKey: process.env.REACT_APP_GROQ_KEY,
+  apiKey: GROQ_KEY,
   dangerouslyAllowBrowser: true
 });
