@@ -59,33 +59,63 @@ const GptSearchField = () => {
     }
   };
 
-  return (
-    <div className="w-full flex justify-center pt-28 px-4 z-30">
-      <div className="w-full max-w-4xl">
-        <form
-          className="flex items-center gap-4 bg-black/80 p-4 rounded-lg shadow-lg"
-          onSubmit={(e) => {
-            e.preventDefault();
-            handleformSubmit();
-          }}
-        >
-          <input
-            ref={movieSearch}
-            type="text"
-            placeholder="What would you like to watch today?"
-            className="flex-1 px-6 py-4 rounded-md bg-zinc-900 text-white text-lg outline-none border border-gray-700 focus:border-red-600 placeholder-gray-400"
-          />
+return (
+  <div className="w-full flex justify-center pt-20 sm:pt-24 md:pt-28 px-4 z-30">
+    <div className="w-full max-w-4xl">
+      <form
+        className="
+          flex flex-col sm:flex-row 
+          items-stretch sm:items-center 
+          gap-3 sm:gap-4 
+          bg-black/80 
+          p-3 sm:p-4 md:p-5 
+          rounded-lg shadow-lg
+        "
+        onSubmit={(e) => {
+          e.preventDefault();
+          handleformSubmit();
+        }}
+      >
+        <input
+          ref={movieSearch}
+          type="text"
+          placeholder="What would you like to watch today?"
+          className="
+            w-full flex-1
+            px-4 sm:px-5 md:px-6
+            py-3 sm:py-4
+            rounded-md
+            bg-zinc-900
+            text-white
+            text-sm sm:text-base md:text-lg
+            outline-none
+            border border-gray-700
+            focus:border-red-600
+            placeholder-gray-400
+          "
+        />
 
-          <button
-            type="submit"
-            className="bg-red-600 hover:bg-red-700 text-white font-semibold px-8 py-4 rounded-md transition-all duration-300"
-          >
-            Search
-          </button>
-        </form>
-      </div>
+        <button
+          type="submit"
+          className="
+            w-full sm:w-auto
+            bg-red-600
+            hover:bg-red-700
+            text-white
+            font-semibold
+            px-6 sm:px-8
+            py-3 sm:py-4
+            rounded-md
+            transition-all duration-300
+            text-sm sm:text-base
+          "
+        >
+          Search
+        </button>
+      </form>
     </div>
-  );
+  </div>
+);
 };
 
 export default GptSearchField;
